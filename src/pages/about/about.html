@@ -6,6 +6,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Tajuk</ion-label>
+      <ion-input type="text" [(ngModel)]="aduan.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Kategori</ion-label>
+      <ion-select [(ngModel)]="aduan.kategori">
+        <ion-option value="Kerosakan">Kerosakan</ion-option>
+        <ion-option value="Bencana">Bencana</ion-option>
+        <ion-option value="Gangguan">Gangguan</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Masalah</ion-label>
+        <ion-textarea row="5" type="text" [(ngModel)]="aduan.masalah"></ion-textarea>
+      </ion-item>
+  </ion-list>
 
+  <div padding>
+    <button ion-button block (click)="saveAduan()">Save</button>
+  </div>
 </ion-content>

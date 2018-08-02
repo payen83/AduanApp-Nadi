@@ -1,0 +1,35 @@
+page-login {
+    .bg {
+        background-image: url('../../assets/imgs/bgimage.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .content-center>*{
+        display: flex !important;
+        align-content: center !important;
+        align-items: center !important;
+    }
+
+    .img-logo {
+        max-width: 150px;
+       
+    }
+
+    .card-ios, .card-md {
+        background: transparent;
+        -webkit-box-shadow: none;
+    }
+
+    .item-md, .item-ios {
+        background-color: transparent;
+        color: white;
+    }
+
+
+    // .text-input::-moz-placeholder, .text-input::-ms-input-placeholder{
+    //     color: white;
+    // }
+    
+
+}

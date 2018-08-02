@@ -1,0 +1,27 @@
+<!--
+  Generated template for the SenaraiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Senarai</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-avatar item-start>
+        <img [src]="user.imageURL">
+      </ion-avatar>
+      <h2>{{ user.name }}</h2>
+      <p>{{ user.icNo }}</p>
+      <ion-note item-end>{{ user.company }}</ion-note>
+    </ion-item>
+  </ion-list>  
+</ion-content>

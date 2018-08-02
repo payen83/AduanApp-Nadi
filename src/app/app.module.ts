@@ -10,6 +10,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SenaraiPageModule } from '../pages/senarai/senarai.module';
+import { AduanProvider } from '../providers/aduan/aduan';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { DetailPageModule } from '../pages/detail/detail.module';
+import { LoginPageModule } from '../pages/login/login.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +26,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    SenaraiPageModule,
+    HttpClientModule,
+    DetailPageModule,
+    LoginPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -34,7 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AduanProvider
   ]
 })
 export class AppModule {}
